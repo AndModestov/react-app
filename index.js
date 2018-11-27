@@ -1,1 +1,1 @@
-import '~/src/hello-world.js';
+import '~/src/catalog/index.js';
