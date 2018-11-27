@@ -1,1 +1,1 @@
-console.log('Hello!');
+import '~/src/hello-world.js';
