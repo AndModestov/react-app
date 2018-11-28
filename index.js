@@ -1,1 +1,1 @@
-console.log('Hello!');
+import '~/src/catalog/index.js';
