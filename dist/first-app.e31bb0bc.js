@@ -24015,7 +24015,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/Bill.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/catalog/components/image.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24023,74 +24023,389 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Bill =
-/*#__PURE__*/
-function () {
-  function Bill() {
-    _classCallCheck(this, Bill);
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-    this._items = [];
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Image =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Image, _Component);
+
+  function Image(props) {
+    _classCallCheck(this, Image);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Image).call(this, props));
   }
 
-  _createClass(Bill, [{
-    key: "add",
-    value: function add(name, price) {
-      var count = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-
-      this._items.push({
-        name: name,
-        price: price,
-        count: count
-      });
-    }
-  }, {
-    key: "remove",
-    value: function remove(name) {
-      var elementIndex = this._items.findIndex(function (item) {
-        return item.name === name;
-      });
-
-      if (elementIndex) {
-        this._items.splice(elementIndex, 1);
-      }
-    }
-  }, {
-    key: "items",
-    value: function items() {
-      return this._items;
-    }
-  }, {
-    key: "totalPrice",
-    value: function totalPrice() {
-      var totalPrice = 0;
-
-      this._items.forEach(function (item) {
-        totalPrice += item.price * item.count;
-      });
-
-      return totalPrice;
+  _createClass(Image, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("p", null, _react.default.createElement("img", {
+        src: this.props.src,
+        alt: this.props.alt,
+        width: this.props.width,
+        height: this.props.height
+      }));
     }
   }]);
 
-  return Bill;
-}();
+  return Image;
+}(_react.Component);
 
-var _default = Bill;
+var _default = Image;
 exports.default = _default;
-},{}],"src/hello-world.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/catalog/components/price.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Price =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Price, _Component);
+
+  function Price(props) {
+    _classCallCheck(this, Price);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Price).call(this, props));
+  }
+
+  _createClass(Price, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("span", null, _react.default.createElement("h3", null, this.props.price, "$"));
+    }
+  }]);
+
+  return Price;
+}(_react.Component);
+
+var _default = Price;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/catalog/components/text-box.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var TextBox =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(TextBox, _Component);
+
+  function TextBox(props) {
+    _classCallCheck(this, TextBox);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(TextBox).call(this, props));
+  }
+
+  _createClass(TextBox, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("span", null, _react.default.createElement("h3", null, this.props.text));
+    }
+  }]);
+
+  return TextBox;
+}(_react.Component);
+
+var _default = TextBox;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/catalog/components/product-card.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _image = _interopRequireDefault(require("./image"));
+
+var _price = _interopRequireDefault(require("./price"));
+
+var _textBox = _interopRequireDefault(require("./text-box"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ProductCard =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProductCard, _Component);
+
+  function ProductCard(props) {
+    _classCallCheck(this, ProductCard);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ProductCard).call(this, props));
+  }
+
+  _createClass(ProductCard, [{
+    key: "render",
+    value: function render() {
+      var product = this.props.product;
+      return _react.default.createElement("div", null, _react.default.createElement(_image.default, {
+        src: product.imageUrl,
+        alt: product.name,
+        width: "200",
+        height: "200"
+      }), _react.default.createElement(_textBox.default, {
+        text: product.name
+      }), _react.default.createElement(_price.default, {
+        price: product.price
+      }), _react.default.createElement("br", null));
+    }
+  }]);
+
+  return ProductCard;
+}(_react.Component);
+
+var _default = ProductCard;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./image":"src/catalog/components/image.js","./price":"src/catalog/components/price.js","./text-box":"src/catalog/components/text-box.js"}],"src/catalog/components/catalog.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _productCard = _interopRequireDefault(require("./product-card"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Catalog =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Catalog, _Component);
+
+  function Catalog(props) {
+    _classCallCheck(this, Catalog);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Catalog).call(this, props));
+  }
+
+  _createClass(Catalog, [{
+    key: "render",
+    value: function render() {
+      var products = this.props.products;
+      return _react.default.createElement("div", null, products.map(function (product) {
+        return _react.default.createElement(_productCard.default, {
+          product: product,
+          key: product.id
+        });
+      }));
+    }
+  }]);
+
+  return Catalog;
+}(_react.Component);
+
+var _default = Catalog;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./product-card":"src/catalog/components/product-card.js"}],"src/catalog/constants/products.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PRODUCTS = void 0;
+var PRODUCTS = [{
+  id: 1,
+  name: 'Parrot1',
+  price: 150,
+  imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG724.png'
+}, {
+  id: 2,
+  name: 'Parrot2',
+  price: 250,
+  imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG721.png'
+}, {
+  id: 3,
+  name: 'Parrot3',
+  price: 350,
+  imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG707.png'
+}];
+exports.PRODUCTS = PRODUCTS;
+},{}],"src/catalog/components/catalog-page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _catalog = _interopRequireDefault(require("./catalog"));
+
+var _products = require("../constants/products");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var CatalogPage =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CatalogPage, _Component);
+
+  function CatalogPage(props) {
+    _classCallCheck(this, CatalogPage);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CatalogPage).call(this, props));
+  }
+
+  _createClass(CatalogPage, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement(_catalog.default, {
+        products: _products.PRODUCTS
+      }));
+    }
+  }]);
+
+  return CatalogPage;
+}(_react.Component);
+
+var _default = CatalogPage;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./catalog":"src/catalog/components/catalog.js","../constants/products":"src/catalog/constants/products.js"}],"src/catalog/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _Bill = _interopRequireDefault(require("~/src/Bill"));
+var _catalogPage = _interopRequireDefault(require("./components/catalog-page"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24112,57 +24427,33 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var HelloWorld =
+var CatalogSection =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(HelloWorld, _React$Component);
+  _inherits(CatalogSection, _React$Component);
 
-  function HelloWorld(props) {
-    var _this;
+  function CatalogSection() {
+    _classCallCheck(this, CatalogSection);
 
-    _classCallCheck(this, HelloWorld);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(HelloWorld).call(this, props));
-    _this.state = {
-      items: [],
-      total: null
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(CatalogSection).apply(this, arguments));
   }
 
-  _createClass(HelloWorld, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var bill = new _Bill.default();
-      bill.add('Pizza', 200);
-      bill.add('Pasta', 150, 2);
-      bill.add('Salad', 250);
-      bill.add('Coffee', 100, 2);
-      this.setState({
-        items: bill.items(),
-        total: bill.totalPrice()
-      });
-    }
-  }, {
+  _createClass(CatalogSection, [{
     key: "render",
     value: function render() {
-      var items = this.state.items;
-      var total = this.state.total;
-      return _react.default.createElement("div", null, _react.default.createElement("h3", null, "Bill:"), _react.default.createElement("ul", null, items.map(function (item) {
-        return _react.default.createElement("li", null, item.name, " - ", item.price, "$ (", item.count, ")");
-      })), _react.default.createElement("h3", null, "Total: ", total, "$"));
+      return _react.default.createElement(_catalogPage.default, null);
     }
   }]);
 
-  return HelloWorld;
+  return CatalogSection;
 }(_react.default.Component);
 
-_reactDom.default.render(_react.default.createElement(HelloWorld, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","~/src/Bill":"src/Bill.js"}],"index.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(CatalogSection, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/catalog-page":"src/catalog/components/catalog-page.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-require("~/src/hello-world.js");
-},{"~/src/hello-world.js":"src/hello-world.js"}],"../../.nvm/versions/node/v9.11.2/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("~/src/catalog/index.js");
+},{"~/src/catalog/index.js":"src/catalog/index.js"}],"../../.nvm/versions/node/v9.11.2/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24189,7 +24480,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57018" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54858" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
