@@ -19,7 +19,6 @@ class CatalogPage extends Component {
   addToBasket(product, amount = 1) {
     const productsInBasket = this.state.productsInBasket;
     productsInBasket.push({ ...product, amount });
-    console.log(productsInBasket);
     this.setState({ productsInBasket });
   }
 

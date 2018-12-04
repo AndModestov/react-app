@@ -8,6 +8,13 @@ import AddToBasketButton from './add-to-basket-button';
 class ProductCard extends Component {
   constructor(props) {
     super(props);
+
+    this.onDragStart = this.onDragStart.bind(this);
+  }
+
+  onDragStart(e) {
+    const product = this.props.product;
+    e.dataTransfer.setData("product",  JSON.stringify(product));
   }
 
   render() {
@@ -15,6 +22,8 @@ class ProductCard extends Component {
 
     return (
       <div
+        onDragStart={this.onDragStart}
+        draggable
         style={{
           border: '1px solid black',
           width: '400px',
