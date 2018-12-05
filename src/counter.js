@@ -1,4 +1,4 @@
-class Bill {
+class Counter {
   constructor() {
     this._items = [];
   }
@@ -31,4 +31,4 @@ class Bill {
   }
 }
 
-export default Bill;
+export default Counter;
