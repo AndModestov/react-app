@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import BasketContext from '../basket-context';
+import BasketContext from '~/src/contexts/basket-context';
 
 class BasketButton extends Component {
   constructor(props) {

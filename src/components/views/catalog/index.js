@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Catalog from './catalog';
-import { PRODUCTS } from '../constants/products';
-import BasketButton from './basket-button';
-import BasketContext from '../basket-context';
+import Catalog from '~/src/components/views/catalog/catalog';
+import { PRODUCTS } from '~/src/constants/products';
+import BasketButton from '~/src/components/views/basket/index';
+import BasketContext from '~/src/contexts/basket-context';
 
 class CatalogPage extends Component {
   constructor(props) {
