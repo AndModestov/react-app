@@ -16,7 +16,26 @@ const PRODUCTS = [
     name: 'Parrot3',
     price: 350,
     imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG707.png'
+  },
+  {
+    id: 4,
+    name: 'Parrot4',
+    price: 450,
+    imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG720.png'
+  },
+  {
+    id: 5,
+    name: 'Parrot5',
+    price: 500,
+    imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG727.png'
+  },
+  {
+    id: 6,
+    name: 'Parrot6',
+    price: 550,
+    imageUrl: 'https://pngimg.com/uploads/parrot/parrot_PNG726.png'
   }
+
 ];
 
 export { PRODUCTS };

@@ -30,7 +30,6 @@ class AddToBasketButton extends Component {
                 Add to Basket
               </button>
               <input type="number"
-                     style={{ width: '40px' }}
                      defaultValue="1"
                      onChange={this.onAmountChange} />
             </div>

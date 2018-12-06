@@ -1,46 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import BasketContext from '~/src/contexts/basket-context';
 
-class BasketButton extends Component {
+class BasketPage extends Component {
   constructor(props) {
     super(props);
-
-    this.onDragOver = this.onDragOver.bind(this);
-  }
-
-  onDragDrop(e, addToBasket) {
-    const product = JSON.parse(e.dataTransfer.getData("product"));
-    addToBasket(product);
-  }
-
-  onDragOver(e) {
-    e.preventDefault();
   }
 
   render() {
     return (
       <BasketContext.Consumer>
       {
-        ({ productsInBasket, addToBasket }) => {
+        ({ productsInBasket }) => {
           return (
-            <div
-              onDragOver={this.onDragOver}
-              onDrop={(e) => this.onDragDrop(e, addToBasket)}
-              style={{
-                border: '1px solid red',
-                marginBottom: '10px',
-                padding: '10px',
-                width: '400px',
-                position: 'fixed',
-                right: '10px',
-                top: '10px'
-              }}>
-              <h2>
-                <span>In Basket ({productsInBasket.length})</span>
-              </h2>
-              <h4>
-                <div>Goods:</div>
+            <div>
+              <h2>Goods In Basket:</h2>
+              <h3>
                 <ul>
                   {
                     productsInBasket.map((prod, key) => (
@@ -48,7 +23,7 @@ class BasketButton extends Component {
                     ))
                   }
                 </ul>
-              </h4>
+              </h3>
             </div>
           )
         }
@@ -58,4 +33,4 @@ class BasketButton extends Component {
   }
 }
 
-export default BasketButton;
+export default BasketPage;

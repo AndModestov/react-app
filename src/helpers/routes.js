@@ -1,4 +1,5 @@
-export const mainPath    = () => '/';
-export const aboutPath   = () => '/about';
-export const catalogPath = () => '/products';
+export const catalogPath  = () => '/';
+export const contactsPath = () => '/contacts';
+export const basketPath   = () => '/basket';
 export const productPath = (id = ':id') => `/products/${id}`;
+// export const aboutPath   = () => '/about';

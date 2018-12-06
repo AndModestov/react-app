@@ -4,6 +4,8 @@ import Image from './image';
 import Price from './price';
 import TextBox from './text-box';
 import AddToBasketButton from './add-to-basket-button';
+import { Link } from "react-router-dom";
+import { productPath } from "~/src/helpers/routes";
 
 class ProductCard extends Component {
   constructor(props) {
@@ -23,22 +25,17 @@ class ProductCard extends Component {
     return (
       <div
         onDragStart={this.onDragStart}
-        draggable
-        style={{
-          border: '1px solid black',
-          width: '400px',
-          padding: '10px',
-          marginBottom: '5px',
-          textAlign: 'center'
-        }}>
-        <Image src={product.imageUrl}
-               alt={product.name}
-               width="200"
-               height="200" />
+        className="product-card"
+        draggable>
+        <Link to={productPath(product.id)}>
+          <Image src={product.imageUrl}
+                 alt={product.name}
+                 width="200"
+                 height="200" />
+        </Link>
         <TextBox text={product.name} />
         <Price price={product.price} />
         <AddToBasketButton product={product} />
-        <br />
       </div>
     )
   }
