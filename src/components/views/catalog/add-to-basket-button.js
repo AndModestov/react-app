@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import BasketContext from '../basket-context';
+import BasketContext from '~/src/contexts/basket-context';
 
 class AddToBasketButton extends Component {
   constructor(props) {
@@ -30,7 +30,6 @@ class AddToBasketButton extends Component {
                 Add to Basket
               </button>
               <input type="number"
-                     style={{ width: '40px' }}
                      defaultValue="1"
                      onChange={this.onAmountChange} />
             </div>

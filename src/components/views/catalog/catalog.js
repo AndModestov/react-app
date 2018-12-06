@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ProductCard from './product-card';
+import ProductCard from '~/src/components/views/catalog/product-card';
 
 class Catalog extends Component {
   constructor(props) {
